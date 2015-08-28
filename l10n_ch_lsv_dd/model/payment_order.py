@@ -37,7 +37,7 @@ class payment_order(models.Model):
             'view_mode': 'tree,form',
             'domain': [('move_id', 'in', move_ids)],
             'res_model': 'account.invoice',
-            'target': 'current',
+            'target': 'new',  # if current, it generate an error
         }
 
         return action
